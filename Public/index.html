@@ -63,10 +63,7 @@
 </head>
 
 <body>
-    <div class="hero_area">
-        <video autoplay loop muted play-inline class="back-video">
-          <source src="images/video (3).mp4" type="video/mp4">
-        </video>
+ 
 
     <header>
 
@@ -136,7 +133,8 @@
     <section id="content">
         <div class="container">
             <h2>About Us</h2>
-            <h3></h3>
+            <h3>Made a Machine Learning Model which will predict whether a planet is an exoplanet or not .
+               </h3>
                 
             </div>
                     
@@ -146,9 +144,12 @@
              <h2 id="introHeader"> Upload your CSV File</h2>
           
             
-            <fieldset >
-                <input type="file" name="File Upload" id="txtFileUpload" accept=".csv" />
-            </fieldset>
+             <form action="/transform" method="post" enctype="multipart/form-data">
+                <input type="file" name="data_file" class="btn btn-block"/>
+                <br>
+                
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
 
             <ul id="errorOutPut"  class="outPut hidden">						
                 <li>Sorry there has been an error.</li>
